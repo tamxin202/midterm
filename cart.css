@@ -1,0 +1,8 @@
+.breadcrumb ul {
+    list-style-type: none;
+}
+
+.breadcrumb {
+    display: inline;
+    margin: 10px;
+}

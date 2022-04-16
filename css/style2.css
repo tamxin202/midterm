@@ -1,0 +1,203 @@
+body {
+    font-family: sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    height: 10vh;
+}
+
+.logo-container,
+.nav-links,
+.cart {
+    display: flex;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+nav {
+    flex: 2;
+}
+
+.nav-links {
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #5f5f79;
+    font-size: 18px;
+}
+
+.cart {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.presentation {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    min-height: 80vh;
+    align-items: center;
+}
+
+.introduction {
+    flex: 1;
+}
+
+.introduction h1 {
+    font-size: 33px;
+    font-weight: 500;
+    background: linear-gradient(to right, #494964, #6f6f59);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.intro-text p {
+    margin-top: 5px;
+    font-size: 22px;
+    color: #585772;
+}
+
+.cta {
+    padding: 50px 0 0 0px;
+}
+
+.cta-select {
+    border: 2px solid #c36cbb;
+    background: transparent;
+    color: #c36cbb;
+    width: 150px;
+    cursor: pointer;
+    height: 50px;
+    font-size: 16px;
+}
+
+.cta-add {
+    background: #c36cbb;
+    width: 150px;
+    cursor: pointer;
+    height: 50px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    margin: 30px 0 0 30px;
+}
+
+input[type="number"] {
+    width: 20%;
+    height: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cover {
+    flex: 1;
+}
+
+.cover img {
+    width: 80%;
+    filter: drop-shadow(0px 5px 3px black);
+    animation: drop 1.5s ease
+}
+
+
+/**/
+
+.show-product {
+    margin-top: 30px;
+    width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart-add {
+    width: 20%;
+    flex-basis: 20%;
+}
+
+.image img {
+    width: 80%;
+}
+
+.show-product {
+    animation: drop-down 1.5s ease;
+}
+
+@keyframes drop-down {
+    0% {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+/**/
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 768px) {
+    .presentation {
+        flex-direction: column;
+    }
+    .introduction {
+        margin-top: 5vh;
+        text-align: center;
+    }
+    .cover {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .intro-text h1 {
+        font-size: 30px;
+    }
+    .intro-text p {
+        font-style: 18px;
+    }
+    .cta {
+        padding: 10px 0 0 0;
+    }
+    .cover img {
+        width: 50%;
+        margin-bottom: 50px;
+    }
+}
+
+.table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
